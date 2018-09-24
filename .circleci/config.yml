@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: docker:17.12.0-ce-git
+    working_directory: /usr/src
+    steps:
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: false
+      - run:
+          name: Build Docker Image
+          # code is checked out in the pipeline, consider copying from CI to Pipeline
+          # consider caching node_modules or switching to npm ci option when it becomes stable
+          command: |
+            npm run build:ci
