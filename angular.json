@@ -19,11 +19,19 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/favicon/favicon.ico",
+              "src/favicon/android-chrome-192x192.png",
+              "src/favicon/favicon-16x16.png",
+              "src/favicon/android-chrome-512x512.png",
+              "src/favicon/favicon-32x32.png",
+              "src/favicon/apple-touch-icon.png",
+              "src/favicon/browserconfig.xml",
+              "src/favicon/safari-pinned-tab.svg",
+              "src/favicon/mstile-150x150.png",
+              "src/favicon/site.webmanifest"
             ],
-            "styles": [
-              {
+            "styles": [{
                 "input": "node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
               },
               "src/styles.css"
@@ -32,12 +40,10 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "src/environments/environment.ts",
+                "with": "src/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -75,9 +81,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              {
-                "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
-              },
+              "src/haaner-tee-theme.sccs",
               "src/styles.css"
             ],
             "scripts": [],
