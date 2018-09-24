@@ -13,4 +13,4 @@ jobs:
           # code is checked out in the pipeline, consider copying from CI to Pipeline
           # consider caching node_modules or switching to npm ci option when it becomes stable
           command: |
-            npm run build:ci
+            docker build -f Dockerfile.integration .
